@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agair</title>
+</head>
+<body>
+  
+    <script>
+        /* 1 round game */
+        let choices = ["rock","paper","scissor"];
+       
+       /*to get user's input*/
+       function getUserInput() {
+           let userInput;
+           while(true) {
+               userInput = prompt("what would be your choice?", 'rock, paper or scissor').toLowerCase();
+               if(userInput == choices[0] ||
+                  userInput == choices[1] ||
+                  userInput == choices[2]) {
+                   break;
+               }
+           }
+           return userInput;
+       }
+       /*a function that return an answer for the game randomly chosen by the computer */
+       function computerPlay() {
+           let arrPos = Math.floor(Math.random()*3);
+           return choices[arrPos];
+       }
+
+       /*simulates the user and the computer playing rock paper scissor game.
+         it accepts two arguments which will be the user and the computer's choice*/
+       function playRPS (userSelection, compSelection) {
+           if (userSelection == "rock" && compSelection == "paper" ||
+               userSelection == "paper" && compSelection == "scissor" ||
+               userSelection == "scissor" && compSelection == "rock") {
+                   alert("You lose! " + compSelection + " beats " + userSelection);
+                   return "LOSE";
+           }else if (userSelection == compSelection){
+               alert("draw!");
+           }else{
+               alert("You win! " + userSelection + " beats " + compSelection);
+               return "WIN";
+           }
+       }
+
+       /*a function to determine who won*/
+       function whoWon(user, comp) {
+           if(comp > user) {
+               alert("you've lost the game.");
+           } else {
+               alert("congratulation! you have won the game.")
+           }
+       }
+
+       /*simulates a 5 round game of rock paper scissor */
+       function game(){
+           alert("welcome to the game of rock paper and scissor!");
+           alert("you will be playing a game of rock paper and scissor with the computer. Whoever first to win 5 round will be the winner.");
+           let userScore = 0;
+           let compScore = 0;
+           do {
+               let round = playRPS(getUserInput(), computerPlay());
+               switch (round) {
+                   case "WIN":
+                       ++userScore;
+                       break;
+                   case "LOSE":
+                       ++compScore;
+                       break;
+               }
+               alert("player = " + userScore + " computer = " + compScore);
+           }
+           while(userScore < 5 && compScore < 5);
+           whoWon(userScore, compScore);
+       }
+
+       game();
+   </script>
+</body>
+</html>

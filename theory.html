@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morena Tirana | Home Page</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theory.css">
+
+</head>
+<body>
+
+    <!-- navbar-->
+    <nav class="navbar">
+        <h1 class="brand">morena tirana</h1>
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="links-container">
+            <li class="links-item"><a href="index.html" class="link active">home</a></li>
+        </ul>
+    </nav>
+
+
+ <!---mid section-->
+ <section class="mid-section">
+    <div class="section-item-container">
+        <img src="img/theory.png" class="section-bg" alt="">
+        <div class="section-info">
+            <h1 class="title">All about <span>JavaScript</span></h1>
+            <p class="info"> Lesson 4 </p>
+        </div>
+    </div>
+</section>
+
+    <!--- Question /Answer Accordion-->
+<h1>TERMINOLOGY</h1>
+
+<div class="accordion">
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      1. Why is it important to write clean code?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       Writing a clean code is important not only because it allows you to return to it and 
+       understand all its work but also because it helps others understand it when reading it. 
+       <br>
+       More specifically having a clean code helps:<br>
+       <ul style="padding-left: 1rem;">
+        <li>refactor, create, and maintain easily a code</li>
+        <li>make small changes without major breaks downs</li>
+        <li>upgrade easily to better versions</li>
+        <li>extend a code easily</li>
+        <li>debug easily</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      2. What is the difference between good comments and bad comments?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         Bad comments are those that are limited at simply telling what a code is doing.<br> 
+         Good comments, on the other side, explain the reason of why a code is written in 
+         a specific way. 
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      3. What is an array?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       An array is a collection of items of the same type stored at contiguous memeory locations.
+       Each element within the array can be accessed via its positions by adding an offset to 
+       a base value. This base value usually is the frist element of the array and has index 0.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      4. What are arrays useful for?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       Arrays are useful when one needs to use many variables of the same type and 
+       store a collection of data. Arrays help maintain large sets of data by using a single
+       variable name to avoid confusion and organize the various data elements in a clear 
+       and efficient way. For these reasons, arrays are used for matrix operations and to 
+       implement structures like queues, heaps, stacks and hash tables. 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      5. How do you access an array element?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         Let's consider this array:<br>
+         <p style="text-align: center; padding: 10px;font-weight: bold;">
+            <span style="color: blue;">const</span> fruits = 
+            [<span style="color:green;">'Apple'</span>, 
+             <span style="color:green;">'Banana'</span>];
+         </p> <br>
+         If you want to access the apple item present in the fruits database one has to do:<br>
+         <p style="text-align: center; padding: 10px; font-weight: bold;"> 
+            fruits[<span style="color:green;">0</span>];
+            <span style="color:grey;">// Apple</span><br>
+        </p>
+         and if you want to access the bananas present in the fruits database one must use: <br>
+         <p style="text-align: center; padding: 10px; font-weight: bold;"> 
+            fruits[<span style="color:green;">1</span>]; 
+            <span style="color:grey;">// Banana</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+     6. How do you change an array element?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         To change an array element and replace it with another one you must:
+         <ol class="span2">
+             <li> use a for loop to iterate as much as array.length </li>
+             <li> in each iteration check where is the array element to be replaced </li>
+             <li>replace the element at that index and break out of the loop</li> 
+         </ol>
+         If you want to change the banana element with strawberry in this array:
+         <br><br>
+         <p>
+            <span class="p">const</span> fruits = 
+            [<span class="green";>'Apple'</span>, 
+             <span class="green";>'Banana'</span>];
+            </p>
+            <br>
+            <p>
+              <span class="p">for</span>(
+              <span class="p">let</span> index = 0; index < fruits.length; index++){ 
+              <br>
+              <span class="p">if</span>(fruits[index] === 
+              <span class="green">'Banana'</span>){ 
+              <br>
+              fruits[index] = <span class="green">'Stawberry'</span>;
+              <br>
+              <span class="p">break</span>; 
+              <br>
+              }
+              <br>
+              }
+              <br>
+              <span class="p">console</span>.log(fruits); 
+              <span class="grey">// ['Apple', 'Stawberry']</span> 
+            </p> 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      7. What are some useful array properties?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         The standard properties of an array object consider its:
+         <br>
+         <ul>
+           <li>length which sets or returns the number of elements in an array.</li>
+           <li> prototype which allows you to add new properties and methods to an array. </li>
+         </ul>
+         <br>
+          Array properties are divided in:
+         <br>
+         <ul>
+           <li><span class="b">Static: </span>
+             <br>
+             <ul>
+               <li"><span>get Array[@@species]:</span> returns the array constructor</li>
+             </ul>
+           </li>
+           <br>
+           <li><span class="b">Instant: </span>
+             <br>
+             <ul>
+               <li><span>array.prototype.length: </span> reflects the number of elements in an array</li>
+               <li><span>array.prototypa[@@unscopables]</span> </li>
+             </ul>
+           </li>
+         </ul>
+         <br>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      8. What are some useful array methods?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       Some of the useful array properties are:
+       <ul>
+        <li> 
+          <span class="b">some ()</span>:
+          <br>
+          tests whether at least one element in the array passes the test implemented by the 
+          <span>`callback`</span> function. The <span>`callback`</span> function will receive 
+          3 arguments, the item, the index, and the full array. Also, it is possible to assign a value for `this`
+          when executing the <span>`callback`</span> by using <span>`thisArg`</span>. 
+          <br>
+          Syntax:
+          <br><br>
+          <p>arr.some(callback(element[, index[, array]])[, thisArg])</p>
+          <br>
+          Example:
+          <br><br>
+          <p>
+                <span class="b">const</span> <span class="green">a</span> =
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">5</span>,
+                <span class="p">8</span>].
+                <span class="green">some</span>(
+                    <span class="green">item</span> => 
+                    <span class="green">item</span> > 
+                    <span class="p">5</span>)
+                <br>
+                <span class="b">const</span> 
+                <span class="green">b</span> =
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">4</span>,
+                <span class="p">5</span>].
+                <span class="green">some</span>(
+                    <span class="green">item</span> => 
+                    <span class="green">item</span> > 
+                    <span class="p">5</span>)
+                <br><br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>(
+                <span class="green">a</span> )
+                <br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>(
+                <span class="green">b</span> )
+                <br><br>
+                <span class="green">Output</span>
+                <br>
+                >  <span class="a">true</span>
+                <br>
+                >  <span class="a">false</span>
+            </p>
+        </li>
+        <li> <span class="b">every()</span>
+            <br>
+            Similar to the <span>`some()`</span> method with the 
+            difference that the <span>`every()`</span> method tests
+            if all elements in the array pass the test implemented by the <span>
+            `callback`</span> function. 
+           <br>
+           Syntax:
+           <br><br>
+           <span class="span1">
+               arr.every(callback(element[, index[, array]])[, thisArg])
+           </span><br>
+           Example:
+           <br><br>
+           <p>
+               <span class="b">const</span> 
+               <span class="green">a</span> =
+               [<span class="p">10</span>,
+               <span class="p">9</span>,
+               <span class="p">8</span>,
+               <span class="p">7</span>,
+               <span class="p">6</span>].
+               <span class="green">every</span>(
+                   <span class="green">item</span> => 
+                   <span class="green">item</span> > 
+                   <span class="p">5</span>)
+               <br>
+               <span class="b">const</span> 
+               <span class="green">b</span> =
+               [<span class="p">7</span>,
+               <span class="p">6</span>,
+               <span class="p">5</span>].
+               <span class="green">every</span>(
+                   <span class="green">item</span> => 
+                   <span class="green">item</span> > 
+                   <span class="p">5</span>)
+               <br><br>
+               <span class="green">console</span>. 
+               <span class="green">log</span>(
+               <span class="green">a</span> )
+               <br>
+               <span class="green">console</span>. 
+               <span class="green">log</span>(
+               <span class="green">b</span> )
+               <br><br>
+               <span class="green">Output</span>
+               <br>
+               >  <span class="a">true</span>
+               <br>
+               >  <span class="a">false</span>
+           </p>
+        </li>
+        <li> <span class="b">reduce()</span>
+            <br>
+            The <span>`reduce()`</span> method executes a
+            <span>`callback`</span> function once for each 
+            assigned value present in the array while taking 4 arguments:
+            <br>
+            <p>
+            <ol>
+                <li>accumulator</li>
+                <li> currentValue</li>
+                <li>currentIndex</li>
+                <li>array</li>
+            </ol>
+            </p>
+            <br>
+            The first time the <span>`callback`</span> is called
+            <span>`accumulator`</span> and <span>`currentValue`</span> can be either the 
+            <span>`initialValue`</span> if it is provided, and the first value
+            in the array if it is not provided. 
+            <br>
+            Syntax:
+            <br><br>
+            <span class="span1">
+                arr.reduce(callback(accumulator, currentValue[, index[, array]] )[, initialValue])
+            </span><br>
+            Example:
+           <br><br>
+           <p>
+               [<span class="p">0</span>,
+               <span class="p">1</span>,
+               <span class="p">2</span>,
+               <span class="p">3</span>,
+               <span class="p">4</span>].
+               <span class="green">reduce</span>((
+                   <span class="green">accumulator</span>,  
+                   <span class="green">currentValue</span>, 
+                   <span class="green">currentIndex</span>,  
+                   <span class="green">array</span>) =>
+                   <span class="green">accumulator</span> +  
+                   <span class="green">currentValue</span>)
+                </p>
+               <br>
+            The final result would be <span>`10`</span>. 
+            <br><br>
+            <p>
+                <span class="b">const</span> 
+                <span class="green">initialValue</span> =
+                <span class="p">10</span>
+                <br>
+                [<span class="p">0</span>,
+                <span class="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">4</span>].
+                <span class="green">reduce</span>((
+                    <span class="green">accumulator</span>,  
+                    <span class="green">currentValue</span>, 
+                    <span class="green">currentIndex</span>,  
+                    <span class="green">array</span>) =>
+                    <span class="green">accumulator</span> +  
+                    <span class="green">currentValue</span>,
+                    <span class="green">initialValue</span>
+                    )
+                 </p>
+                 <br>
+        </li>
+        <li> <span class="b">map()</span>
+            The <span>`map()`</span> method creates a new array populated
+            with the results of the <span>`callback`</span> function for each
+            element in the array. Here the <span>`callback`</span> function
+            will receive 3 arguments, <span>`currentlValue`</span>, 
+            <span>`index`</span>, and <span>`array`</span>.
+            The  <span>`callback`</span> is only invoked for indexes
+            of the array assigned values (including  <span>`undefined`</span>).
+            It has to be highlighted that <span>`map()`</span> creates a new 
+            array on each call. If you want to simply iterater and don't need the array, then better use
+            <span>`forEach()`</span> or <span>`for-of`</span>.
+            <br>
+            Syntax:
+            <br><br>
+            <span class="span1">
+                arr.map(callback( currentValue[, index[, array]] )[, thisArg])
+            </span><br>
+            Example:
+            <br><br>
+            <p>
+                <span class="b">const</span> 
+                <span class="green">numbers</span> =
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">4</span>,
+                <span class="p">5</span>]
+                <br>
+                <span class="b">const</span> 
+                <span class="green">doubled</span> =
+                [<span class="green">numbers</span>.
+                <span class="green">map</span>(
+                <span class="green">value</span> => 
+                <span class="green">value</span> * 
+                <span class="p">2</span>)
+                <br><br>
+                <span class="green">console</span>.
+                <span class="green">log</span>(
+                <span class="green">doubled</span>) 
+                <br><br>
+                <span class="green">Output</span>
+                <br>
+                > (<span class="p">5</span>)
+                [<span class="p">2</span>,
+                <span class="p">4</span>,
+                <span class="p">6</span>,
+                <span class="p">8</span>,
+                <span class="p">10</span>]
+                </p>
+                <br><br>
+            So, <span>`map()`</span> will create a new array as this:
+            <br><br>
+            <p> 
+                <span class="b">const</span> 
+                <span class="green">numbers</span> =
+                [<spanclass="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">4</span>,
+                <span class="p">5</span>]
+                <br>
+                <span class="b">const</span> 
+                <span class="green">numbers2</span> =
+                <span class="green">numbers</span>.
+                <span class="green">map</span>(
+                <span class="green">value</span> => 
+                <span class="green">value</span>)
+                <br>
+                <span class="green">console</span>.
+                <span class="green">log</span>(
+                <span  class="yg">'numbers'</span>,
+                <span class="green">numbers</span>)
+                <br>
+                <span class="green">console</span>.
+                <span class="green">log</span>(
+                <span  class="yg">'numbers2'</span>,
+                <span class="green">numbers2</span>)
+                <br>
+                <span class="green">console</span>.
+                <span class="green">log</span>(
+                <span class="green">numbers</span> ===
+                <span class="green">numbers2</span>)
+                <br><br>
+                <span class="green">Output</span>
+                <br>
+                <span class="green">numbers</span> (
+                <span class="p">5</span>)
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">4</span>,
+                <span class="p">5</span>]
+                <br>
+                <span class="p">numbers2</span> (
+                <span class="p">5</span>)
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">4</span>,
+                <span class="p">5</span>]
+                <br>
+                <span class="a">false</span> 
+            </p>
+            <br>
+        </li>
+        <li> <span class="b">flat()</span>
+            <br>
+            The <span>`flat()`</span> method creates a new array 
+            with all sub-array elements concatenated into it recursively up to the specified depth, 
+            and will flatten 1 level by default.
+            <br>
+            Syntax:
+            <br>
+            <span class="span1">arr.flat([depth])</span>
+            <br><br>
+            Examples:
+            <br><br>
+            <p> 
+                <span class="b">const</span> 
+                <span class="green">arr1</span> =
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                [<span class="p">3</span>,
+                <span class="p">4</span>]]
+                <br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>(
+                <span class="green">arr1</span>. 
+                <span class="green">flat</span>())
+                <br><br>
+                <span class="b">const</span> 
+                <span class="green">arr2</span> =
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                [<span class="p">3</span>,
+                <span class="p">4</span>,
+                [<span class="p">5</span>,
+                <span class="p">6</span>]]]
+                <br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>(
+                <span class="green">arr2</span>. 
+                <span class="green">flat</span>())
+                <br><br>
+                <span class="b">const</span> 
+                <span class="green">arr3</span> =
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                [<span class="p">3</span>,
+                <span class="p">4</span>,
+                [<span class="p">5</span>,
+                <span class="p">6</span>]]]
+                <br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>(
+                <span class="green">arr3</span>. 
+                <span class="green">flat</span>(
+                <span class="p">2</span>))  
+                <br><br>
+                <span class="b">const</span> 
+                <span class="green">arr4</span> =
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                [<span class="p">3</span>,
+                <span class="p">4</span>,
+                [<span class="p">5</span>,
+                <span class="p">6</span>,
+                [<span class="p">7</span>,
+                <span class="p">8</span>,
+                [<span class="p">9</span>,
+                <span class="p">10</span>]]]]]
+                <br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>(
+                <span class="green">arr4</span>. 
+                <span class="green">flat</span>(
+                <span class="a">Infinity</span>)) 
+                <br><br>
+                <span class="green">Output</span>
+                <br>
+                > (<span class="p">4</span>)
+                [<span class="p">1</span>,
+                [<span class="p">2</span>,
+                <span class="p">3</span>,
+                <span class="p">4</span>]
+                <br>
+                > (<span class="p">5</span>)
+                [<span class="p">1</span>,
+                <span class="p">2</span>,
+                <span class="p">3</span>,
+                [<span class="p">4</span>, Array(
+                 <span class="p">2</span>)]
+                 <br>
+                 > (<span class="p">6</span>)
+                 [<span class="p">1</span>,
+                 <span class="p">2</span>,
+                 <span class="p">3</span>,
+                 <span class="p">4</span>,
+                 <span class="p">5</span>,
+                 <span class="p">6</span>]
+                 <br>
+                 > (<span class="p">10</span>)
+                 [<span class="p">1</span>,
+                 <span class="p">2</span>,
+                 <span class="p">3</span>,
+                 <span class="p">4</span>,
+                 <span class="p">5</span>,
+                 <span class="p">6</span>
+                 <span class="p">7</span>,
+                 <span class="p">8</span>,
+                 <span class="p">9</span>,
+                 <span class="p">10</span>]
+                 <br>
+            </p>
+        </li>
+        <li> <span class="b">filter()</span>
+            <br>
+            The <span>`filter()`</span> method creates a new array with
+            all the elements that pass the test implemented by the 
+            <span>`callback`</span> function.
+            <br> 
+            Definition: 
+            <br>
+            <span class="span1">
+                arr.filter(callback(element[, index, [array]])[, thisArg])
+            </span>
+            <br>
+            Examples:
+            <br><br>
+            <p>
+            <span class="a">const</span>
+            <span class="green">array</span> = 
+            [ -<span class="p">3</span>,
+            -<span class="p">2</span>,
+            -<span class="p">1</span>,
+            <span class="p">0</span>,
+            <span class="p">1</span>,
+            <span class="p">2</span>,
+            <span class="p">3</span>,
+            <span class="p">4</span>,
+            <span class="p">5</span>,
+            <span class="p">6</span>,
+            <span class="p">7</span>,
+            <span class="p">8</span>,
+            <span class="p">9</span>,
+            <span class="p">10</span>,
+            <span class="p">11</span>,
+            <span class="p">12</span>,
+            <span class="p">13</span>]
+            <br><br>
+            <span class="a">function</span>
+            <span class="green">isPrime</span>(
+            <span class="green">num</span>) { 
+            <br>
+            <p>
+                <span class="a">for</span>(
+                <span class="a">let</span>
+                <span class="green">i</span> = 
+                <span class="p">2</span>; 
+                <span class="green">num</span> >
+                <span class="green">i</span> ;
+                <span class="green">i</span>++){
+                <br>
+                <span class="a">if</span> (
+                <span class="green">num</span> %
+                <span class="green">i</span> == 
+                <span class="p">0</span>){
+                <br>
+                <span class="a">return false</span>
+                <br>
+                }
+                <br>
+            }
+            <span class="a">return</span>
+            <span class="green">num</span> >
+            <span class="p">1</span>
+            <br>
+        }
+        <br>
+        <span class="green">console</span>.
+        <span class="green">log</span>(
+        <span class="green">array</span>.
+        <span class="green">filter</span>(
+        <span class="b">isPrime</span>))
+        </p>
+        <br><br>
+        <p>
+           <span class="green">Output</span>
+           <br>
+           >(<span class="p">6</span>) 
+           [<span class="p">2</span>, 
+            <span class="p">3</span>, 
+            <span class="p">5</span>, 
+            <span class="p">7</span>, 
+            <span class="p">11</span>, 
+            <span class="p">13</span>]
+        </p>
+        <br>
+        </li>
+        <li> <span class="b">forEach()</span>
+            <br>
+            The <span>`forEach()`</span> method executes a provided 
+            function once for each array element.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               arr.forEach(callback( currentValue [, index[, array]])[, thisArg])
+            </span>
+            <br><br>
+            Example:
+            <br><br>
+            <p>
+                <span class="a">const</span> 
+                <span class="green">array</span> =
+                [<span class="p">1</span>, 
+                 <span class="p">2</span>,
+                 <span class="p">3</span>, 
+                 <span class="p">4</span>, 
+                 <span class="p">5</span>]  
+                 <br>
+                 <span class="green">array</span>.
+                 <span class="green">forEach</span> 
+                 ((<span class="green">item</span>) =>
+                 <span class="green">console</span>.
+                 <span class="green">log</span>
+                 (<span class="green">item</span>))
+                 <br><br>
+                 <span  class="g">Output</span>
+                 <br>
+                 <span class="p">1 </span>
+                 <br>
+                 <span class="p">2 </span>
+                 <br>
+                 <span class="p">3 </span>
+                 <br>
+                 <span class="p">4 </span>
+                 <br>
+                 <span class="p">5 </span>
+                 </p>
+                 <br>
+                 When using the  <span>`forEach()`</span> function
+                 do not stop or break the loop unless by throwing an exception. 
+                 The <span>`forEach()`</span> function expects a 
+                 synchronous <span>`callback`</span> and it will
+                 not wait for promises to be resolved.
+                 <br>
+                 Example: 
+                 <br><br>
+                 <p>
+                    <span class="a">let</span>
+                    <span class="green">ratings</span> = 
+                    [<span class="p">5</span>, 
+                    <span class="p">4</span>, 
+                    <span class="p">5</span>]
+                    <br>
+                    <span class="a">let</span>
+                    <span class="green">sum</span> = 
+                    <span sclass="p">0</span> 
+                    <br>
+                    <span class="a">let</span> 
+                    <span class="green">sumFunction</span> = 
+                    <span class="a">async function</span>
+                    (<span class="green">a</span>, 
+                     <span class="green">b</span>)
+                     <br>
+                     {
+                     <br>
+                     <span class="a">return</span>  
+                     <span class="green">a</span> +  
+                     <span class="green">b</span>
+                     <br>
+                     }
+                     <br>
+                     <span class="green">ratings</span>. 
+                     <span class="green">forEach</span>
+                     (<span class="a">async function</span>
+                     (<span class="green">rating</span>){
+                     <br>
+                     <span class="green">sum</span> = 
+                     (<span class="a">await</span> 
+                     (<span class="green">sumFunction</span>
+                     (<span class="green">sum</span>, 
+                     <span class="green">rating</span>)
+                     <br>
+                     })
+                     <br>
+                     <span class="green">console</span>.
+                     <span class="green">log</span>, 
+                     (<span class="green">sum</span>)
+                     <br><br>
+                     <span class="green">Output</span>
+                     <br>
+                     <span class="p">0</span>
+                     </p>
+                     <br>
+        </li>
+        <li> <span class="b">findIndex()</span>
+            <br>
+            The <span>`findIndex()`</span> method returns the index
+            of the first element in the array which satisfies the 
+            <span>`callback`</span> function. 
+            If no elements satisfies the <span>`callback`</span>
+            function then it will return -1. The <span>`findIndex()`</span>
+            will execute the <span>`callback`</span> function even 
+            for indexes with values that have not been assigned.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               arr.findIndex(callback( element[, index[, array]] )[, thisArg])
+            </span>
+            <br><br>
+            Example:
+            <br><br>
+            <p>
+                <span class="a">function</span>
+                <span class="green">isPrime</span>
+                (<span class="green">num</span>) {
+                <br>
+                <br><br>
+            <p>
+                <span class="a">for</span> 
+                (<span class="a">let</span>
+                <span class="green">i</span> =
+                <span class="p">2</span>; 
+                <span class="green">num </span> >
+                <span class="green">i</span>; 
+                <span class="green">i</span>++){
+                <br>
+                <span class="a">if</span>
+                (<span class="green">num </span> %
+                 <span class="green">i</span> == 
+                 <span class="p">0 </span>) {
+                <br>
+                <span class="a">return false </span> 
+                <br>
+                 }
+                 <br>
+                }
+                <span class="a">return </span>  
+                <span class="green">num </span> >
+                <span class="p">1 </span> 
+                <br>
+            }
+            <br>
+            <span class="green">console </span>.
+            <span class="green">log</span>
+            ([<span class="p">4 </span>, 
+              <span class="p">6 </span>, 
+              <span class="p">8 </span>, 
+              <span class="p">9 </span>, 
+              <span class="p">12 </span>].
+              <span class="green">findIndex</span>
+              (<span class="green">isPrime</span>))
+              <br>
+              <br>
+              <span class="green">console </span>.
+              <span class="green">log</span>
+              ([<span class="p">4 </span>, 
+                <span class="p">6 </span>, 
+                <span class="p">7</span>, 
+                <span class="p">9 </span>, 
+                <span class="p">12 </span>].
+                <span class="green">findIndex</span>
+                (<span class="green">isPrime</span>))
+                <br><br>
+                <span class="green">Output</span>
+                <br>
+                -<span class="p">1 </span>
+                <br> 
+                <span class="p">2 </span>
+                </p>
+                <br>
+        </li>
+        <li> <span class="b">find()</span>
+            <br>
+            The <span>`find()`</span> method returns the value
+            of the first element which satisfies the <span>`callback`</span>
+            function. If no elements satisfies the <span>`callback`</span>
+            function then it will return <span>`undefined`</span>.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               arr.find(callback(element[, index[, array]])[, thisArg])
+            </span>
+            <br><br>
+            Example:
+            <br><br>
+            <p>
+                <span class="a">const</span>
+                <span class="green">inventory</span> = [
+                <br>
+                {<span class="green">name</span>:
+                 <span  class="yg">'apples'</span>, 
+                 <span class="green">quantity</span>: 
+                 <span class="p">2</span>},
+                 <br>
+                 {<span class="green">name</span>:
+                 <span  class="yg">'bananas'</span>, 
+                 <span class="green">quantity</span>: 
+                 <span class="p">0</span>},
+                 <br>
+                 {<span class="green">name</span>:
+                 <span  class="yg">'cherries'</span>, 
+                 <span class="green">quantity</span>: 
+                 <span class="p">5</span>},
+                 <br>
+                 ]
+                 <br><br>
+                <span class="a">const</span> 
+                <span class="green">result</span> = 
+                <span class="green">inventory</span>.
+                <span class="green">find</span>()
+                ({<span class="green"> name </span> }) => 
+                <span class="green">name</span> ===  
+                <span  class="yg">'cherries'</span> )
+                <br>
+                <span class="green">console</span>.
+                <span class="green">log</span>
+                (<span class="green">result</span>)
+                <br><br>
+                <span class="green">Output</span> 
+                <br>
+                > {<span class="green">name</span>:
+                <span  class="yg">"cherries"</span>, 
+                <span class="green">quantity</span>: 
+                <span class="p">5</span>}
+                </p>
+                <br>
+        </li>
+        <li> <span class="b">sort()</span>
+            <br>
+            The <span>`sort()`</span> function is very common
+            and allows to sort the elements of an array in place returning the sorting array.
+            The default sort order is ascending.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               arr.sort([compareFunction])
+            </span>
+            <br><br>
+            Example:
+            <br>
+            <p>
+                <span class="a">const</span>
+                <span class="green">numbers</span> = 
+                [<span class="p">4</span>,
+                 <span class="p">2</span>,
+                 <span class="p">5</span>], 
+                 <span class="p">1</span>,
+                 <span class="p">3</span>]
+                 <br>
+                 <br>
+                 <span class="green">numbers</span>.
+                 <span class="green">sort</span>(
+                 (<span class="green">a</span>,
+                 <span class="green">b</span>) =>  
+                 <span class="green">a</span> -
+                 <span class="green">b</span>)
+                 <br>
+                 <span class="green">console</span>.
+                 <span class="green">log</span>
+                 (<span class="green">numbers</span>)
+                 <br><br>
+                 <span class="green">Output</span>
+                 <br>
+                 > (<span class="p">5</span>)
+                 [<span class="p">1</span>, 
+                  <span class="p">2</span>, 
+                  <span class="p">3</span>,   
+                  <span class="p">4</span>,  
+                  <span class="p">5</span>]
+                  </p>
+                  <br><br>
+         The sorting happens in place, so the sort function will modify the existing array and 
+         return a reference to the same array. The original array and the returned one are the 
+         same.
+         <br><br>
+         <p>
+            <span sclass="a">const</span>
+            <span class="green">numbers</span> = 
+            [<span class="p">4</span>,
+             <span class="p">2</span>,
+             <span class="p">5</span>, 
+             <span class="p">1</span>,
+             <span class="p">3</span>]
+             <br>
+             <br>
+             <span class="a">const</span> 
+             <span class="green">numbers2</span> =
+             <span class="green">numbers</span>.
+             <span class="green">sort</span>
+             ((<span class="green">a</span>,
+             <span class="green">b</span>) =>  
+             <span class="green">a</span> -
+             <span class="green">b</span>)
+             <br>
+             <span class="green">console</span>.
+             <span class="green">log</span>
+             (<span class="green">'numbers'</span>,
+              <span class="green">numbers</span>)
+             <br>
+             <span class="green">console</span>.
+             <span class="green">log</span>
+             (<span  class="yg">'numbers2'</span>,
+              <span class="green">numbers2</span>)
+              <br>
+              <span class="green">console</span>.
+              <span class="green">log</span>
+              (<span class="green">numbers</span> ===
+               <span class="green">numbers2</span>)
+             <br><br>
+             <span class="green">Output</span>
+             <br>
+              <span class="green">numbers</span>
+             > (<span class="p">5</span>)
+             [<span class="p">1</span>, 
+              <span class="p">2</span>, 
+              <span class="p">3</span>,   
+              <span class="p">4</span>,  
+              <span class="p">5</span>]
+              <br>
+              <span class="green">numbers2</span>
+             > (<span class="p">5</span>)
+             [<span class="p">1</span>, 
+              <span class="p">2</span>, 
+              <span class="p">3</span>,   
+              <span class="p">4</span>,  
+              <span class="p">5</span>]
+              <br>
+              <span class="a">true</span>
+              </p>
+              <br>
+        </li>
+        <li> <span class="b">concat()</span>
+            <br>
+            The <span>`conact()`</span> method merges two
+            or more arrays into a new one.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
+            </span>
+            <br><br>
+            Example:
+            <br>
+            <p>
+                <span class="a">const</span>
+                <span class="green">letters</span> = 
+                [<span  class="yg">'a'</span>,
+                 <span  class="yg">'b'</span>,
+                 <span  class="yg">'c'</span>]
+                 <br>
+                 <span class="a">const</span>
+                 <span class="green">numbers</span> = 
+                 [<span class="p">1</span>,
+                  <span class="p">2</span>,
+                  <span class="p">3</span>]
+                  <br><br>
+                  <span class="green">console</span>.
+                  <span class="green">log</span>(
+                  <span class="green">letters</span>.
+                  <span class="green">concat</span>( 
+                  <span class="green">numbers</span>))
+                  <br><br>
+                  <span class="green">Output</span>
+                  <br>
+                  > (<span class="p">6</span>)
+                  [<span  class="yg">"a"</span>, 
+                   <span  class="yg">"b"</span>, 
+                   <span  class="yg">"c"</span>, 
+                   <span class="p">1</span>,   
+                   <span class="p">2</span>,  
+                   <span class="p">3</span>]
+                   </p>
+                   <br>
+
+        </li>
+        <li> <span class="b">fill()</span>
+            <br>
+            The <span>`fill()`</span> method changes all the elements
+            in an array to a static value, from start index, by default is <span>`0`</span>
+            , to an end index of <span>`array.length`</span>). 
+            The updates happen in place and returns a reference to the same array.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               arr.fill(value[, start[, end]])
+            </span>
+            <br><br>
+            Example:
+            <br>
+            <p>
+                <span class="a">const</span>
+                <span class="green">original</span> = 
+                [<span class="p">1</span>,
+                 <span class="p">2</span>,
+                 <span class="p">3</span>]
+                 <br>
+                 <span class="a">const</span>
+                 <span class="green">result</span> = 
+                 <span class="green">original</span>.
+                 <span class="green">fill</span>
+                (<span class="p">4</span>)
+                <br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>
+                (<span class="yg">'original'</span>,
+                <span class="green">original</span>)
+                <br>
+                <span class="green">console</span>. 
+                <span class="green">log</span>
+                (<span  class="yg">'result'</span>,
+                 <span class="green">result</span>)
+                 <br>
+                 <span class="green">console</span>. 
+                 <span class="green">log</span>
+                (<span class="green">original</span> ===
+                 <span class="green">result</span>)
+                 <br><br>
+                 <span class="green">Output</span>
+                 <br>
+                 <span class="green">original</span>>
+                 (<span class="p">3</span>)
+                 [<span class="p">4</span>,  
+                  <span class="p">4</span>, 
+                  <span class="p">4</span>]
+                  <br>
+                  <span class="green">result</span>> 
+                  (<span class="p">3</span>)
+                  [<span class="p">4</span>,  
+                   <span class="p">4</span>, 
+                   <span class="p">4</span>]
+                   <br>
+                 <span class="a">true</span>
+                 </p>
+                 <br>
+        </li>
+        <li> <span class="b">includes()</span>
+            <br>
+            The <span>`includes()`</span> method determines whether
+            an array includes a certain value among its entries, returning 
+            <span>`false`</span> or <span>`true`</span><div class=""></div>
+            This method is case-sensitive when comparing strings and characters.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               arr.includes(valueToFind[, fromIndex])
+            </span>
+            <br><br>
+            Example:
+            <br><br>
+            <p>
+            <span class="green">console</span>.
+            <span class="green">log</span>(
+            [<span class="p">1</span>, 
+             <span class="p">2</span>, 
+             <span class="p">3</span>]. 
+             <span class="green">includes</span>(
+             <span class="p">2</span>))
+             <br>
+             <span class="green">console</span>.
+             <span class="green">log</span>(
+            [<span class="p">1</span>, 
+             <span class="p">2</span>, 
+             <span class="p">3</span>]. 
+             <span class="green">includes</span>(
+             <span class="p">4</span>))
+             <br><br>
+             <span class="green">Output</span>
+             <br>
+             <span class="a">true</span>
+             <br>
+             <span class="a">false</span>
+             </p>
+             <br>
+        </li>
+        <li> <span class="b">reverse()</span>
+            <br>
+            The <span>`reverse()`</span> method reverses an array in 
+            place in the sense that the function will transpose the elements of the array, making
+            the first element become the last and the last become the first. This mutates the 
+            initial array and returns a reference to the same.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               a.reverse()
+            </span>
+            <br><br>
+            Example:
+            <br><br>
+            <p>
+            <span class="green">console</span>.
+            <span class="green">log</span>(
+            [<span class="p">1</span>, 
+             <span class="p">2</span>, 
+             <span class="p">3</span>]. 
+             <span class="green">reverse</span>())
+             <br><br>
+             <span class="green">Output</span>
+             <br>
+             > (<span class="p">3</span>) 
+               [<span class="p">3</span>, 
+                <span class="p">2</span>, 
+                <span class="p">1</span>]
+            </p> 
+            <br> 
+        </li>
+        <li> <span class="b">flatMap()</span>
+            <br>
+            The <span>`flatMap()`</span> method applies a function
+            to each element of the array and then flattens the result into an array. It combines
+            <span>`flat()`</span> and <span>
+            `map()`</span> methods in one function.
+            <br>
+            Definition:
+            <br><br>
+            <span class="span1">
+               arr.flatMap(callback(currentlValue[, index[, array]])[, thisArg])
+            </span>
+            <br><br>
+            Example:
+            <br><br>
+            <p>
+                <span class="a">const</span> 
+                <span class="green">array</span> =
+                [[<span class="p">1</span>], 
+                [<span class="p">2</span>], 
+                [<span class="p">3</span>], 
+                [<span class="p">4</span>], 
+                [<span class="p">5</span>]]
+                <br>
+                <span class="a">const</span> 
+                <span class="green">a</span> =
+                <span class="green">array</span>.
+                <span class="green">flatMap</span>(
+                <span class="green">arr</span> => 
+                <span class="green">arr</span> *
+                <span class="p">10</span>) 
+                <br><br>
+                <span class="a">const</span> 
+                <span class="green">b</span> =
+                <span class="green">array</span>.
+                <span class="green">flat()</span>.
+                <span class="green">map</span>(
+                <span class="green">arr</span> => 
+                <span class="green">arr</span> *
+                <span class="p">10</span>) 
+                <br><br>
+                <span class="green">console</span>.
+                <span class="green">log</span>(
+                <span  class="yg">'flatMap'</span>,
+                <span class="green">a</span>)
+                <br>
+                <span class="green">console</span>.
+                <span class="green">log</span>(
+                <span  class="yg">'flat&map'</span>,
+                <span class="green">b</span>)
+                <br><br>
+                <span class="green">Output</span>
+                <br>
+                <span class="green">flatMap</span> 
+                (<span class="p">5</span>) 
+                [<span class="p">10</span>,
+                 <span class="p">20</span>, 
+                 <span class="p">30</span>,
+                 <span class="p">40</span>,
+                 <span class="p">50</span>]
+                 <br>
+                 <span class="green">flat&map</span> 
+                (<span class="p">5</span>) 
+                [<span class="p">10</span>,
+                 <span class="p">20</span>, 
+                 <span class="p">30</span>,
+                 <span class="p">40</span>,
+                 <span class="p">50</span>]
+            </p>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      9. What are loops useful for?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         Loops are used to execute a group of instructions or a block of code multiple times
+         , without writing it repeatdedly. The block of code is executed on the conditions
+         controled by the loop. Loops simplify and oprimize the process of coding.
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      10. What is the break statement?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         The <span>break</span> statement terminates the execution of the nearest enclosing
+         <span>do</span>, <span>for</span>, <span>switch</span>, or <span>while</span>, 
+         statement in which it appears by passing the control to the statement that follows the 
+         terminated statement. 
+         <br>
+         Syntax:
+         <br>
+         <p style="padding-left: 20%;">
+          <span style="color:blue;">break</span> [
+          <span>label</span>];
+        </p>
+        <br>
+         Example:
+         <br><br>
+         <p style="padding-left: 20%;">
+          <span style="color:blue;">let</span> i = 
+          <span style="color:green;">0</span>;
+          <br>
+          <span style="color:blue;">while</span> ( i 
+          < <span style="color:green;">6</span>) {
+          <br>
+          <span style="color:blue;">if</span> i === 
+          <span style="color:green;">3</span>) {
+          <br>
+          <span style="color:blue;">break</span>;
+          <br>
+          }
+          <br>
+          i = i + <span style="color:green;">1</span>;
+          <br>
+        }
+        <br>
+        console. <span style="color:red;">log</span>(i); 
+        <br>
+        <span style="color:grey;">// output 3</span>;
+        <br>
+        </p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      11. What is the continue statement?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         The <span>continue</span> statement terminates the execution of the statements in the 
+         current iteration of the current or labeled loop, and continues execution of the 
+         loop with the next iteration. It differs from the <span>break</span> statement 
+         because instead of <span>"jumping out"</span> of a loop, the continue statement 
+         <span>"jumps over"</span> one iteration in the loop.
+         <br>
+         Syntax:
+         <br>
+         <p style="padding-left: 20%; font-weight: bold;">
+          <span style="color: green;">continue</span> labelname;
+        </p>
+        <br>
+        Example:
+        <br><br>
+        <p style="padding-left: 20%; font-weight: bold;">
+         <span style="color:blue;">let</span> text = 
+         <span style="color:red;">" "</span>;
+         <br>
+         <span style="color:blue;">for</span> ( 
+         <span style="color:blue;">let</span> i = 
+         <span style="color:red;">0</span>; i <
+         <span style="color:red;">5</span>; i++) {
+         <br>
+         <span style="color:blue; padding-left: 10%;">if</span>(i === 
+         <span style="color:red;">3</span>)
+         <span style="color:blue;">continue</span>;
+         <br>
+         text += i + 
+         <span style="color:red;">"<br>"</span>;
+         <br>
+         }
+         <br>
+       <span style="color:grey;">// output will be:
+      <br>
+       0
+       <br>
+       1
+       <br>
+       2
+       <br>
+       4
+       </span>
+       <br>
+       </p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      12. What is the DOM?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         The DOM, <span>Document Obect Model</span>, is the data representation
+         of the objects that comprise the structure and content of a document on the web.
+         It is not a programming language and it is not a part of JavaScirpt.
+         DOM is one the multiple web's APIs programing interface for web documents 
+         and it represents the page programs can change the document structure, style, 
+         and content. The DOM allows to manipulate a webpage displayed in the browser 
+         window or its HTML source. To access the DOM you use the API directly in 
+         JavaScript from within a browser run program, <span> script</span>.
+        <br>
+        Example:
+        <br><br>
+        <p>
+         <span class=b>const</span> 
+         paragraphs = document.
+         <span class=r>querySeelectorAll</span>(
+         <span class=green>"p"</span>);
+         <br>
+         <span class=grey>// paragraphs [0] is the first element</span>
+          <br>
+         <span class=grey>// paragraphs [1] is the second element</span>
+         <br>
+         <span class=r>alert</span>(paragraphs 
+         [<span class=green>0</span>].nodeName);
+       <br>
+       </p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      13. How do you target the nodes you want to work with?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        To target a node you first must select it by using one of the many methods the DOM
+        API offers called on the <span> document</span> object followed by the dot notation.
+        <br>
+        Example:
+        <br><br>
+        <p>
+          const elementById = document.getElementById("idName");
+          <br>
+          const elementByCalssName = document.getElementsByClassName(".className");
+          <br>
+          const elementByTagName = document.getElementsByTagName("");
+          <br>
+          const elementName = getElementsByName("input-name");
+          <br>
+          const querySelectionByClass = document.querySelector();
+          <br>
+          const queryAllParagraphs = document.querySelectorAll("p");
+       <br>
+       </p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      14. How do you create an element in DOM?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        To create an element in DOM use the <span> createElement()</span> method.
+        <br>
+        Example:
+        <br><br>
+        <p>
+          const paragraph = document.createElement"p");
+          <br>
+        </p>
+        To create a text node:
+        <br>
+        <p>const text = document.createTextText("this is a paragraph.");</p>
+        <br>
+        To create a new <span>div</span>:
+        <br>
+        <p>const e = document.creteElement('div');</p>
+          <br>
+          To fill the <span>div</span> element with any HTML content:
+          <p> e.innerHTNL = 'JavaScipt DOM';</p>
+          <br>
+          
+          To create text nodes and append the text nodes to the new element use:
+          <p>
+            var textnode = document.createTextNode('JavaScript DOM');
+            <br>
+            e.appendChild(textnode);
+          </p>
+          <br>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      15. How do you add add an element to the DOM?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        Once created an element in DOM you can add it to an existing element by appending it.
+        <br>
+        Example:
+        <br><br>
+          To attach the <span> div</span> element of the DOM tree use <span>appenChild()</span>
+          method.
+          <p> <span class="green">document.body.appendChild(e);</span></p>
+          <br>
+          To append the text nodes to the new element use:
+          <br>
+          <p>
+            const paragraph = document.createElement("p");
+            <br>
+            const node = document.createTextNode("This is a new paragraph.");
+            <br>
+            <span class="green">paragraph.appendChild(node);</span>
+          </p>
+          <br><br>
+          If there is an existing element in the code:
+          <br>
+          <p>
+            const element = document.getElementById("div1");
+          </p>
+          <br>
+          Then you add the new element by:
+          <br>
+          <p><span class="green">element.appendChild(para);</span></p>
+          <br>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      16. How do you remove an element from the DOM?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        Removing an element means that the HTML document contains a <span>div</span> element
+        with 2 child nodes. 
+        <br>
+        Example:
+        <br><br>
+        <p>
+         <<span class="p">div</span>> 
+         <br>
+         <<span class="p">p</span>
+          <span class="r"> id</span> = 
+          <span class="b">"p1"</span> This is a paragraph. 
+          <<span class="p">/p</span>>
+          <br>
+          <<span class="p">p</span>
+          <span class="r"> id</span> = 
+          <span class="b">"p2"</span> This is another paragraph. 
+          <<span class="p">/p</span>>
+          <br>
+          <<span class="p">div</span>>
+         <br>
+        </p>
+        Then you find the element you want to remove:
+        <br><br>
+        <p>
+          <span class="p">const</span> 
+            element = document.getElementById(
+              <span class="b">"p1"</span>);
+              <br>
+        </p>
+        Then execute the remove() method on that element:
+        <br><br>
+          <p><span class="green">element.remove();</span></p>
+          <br>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      17. How can you alter an element in the DOM?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        Once you selected the DOM element and created it you can replace or alter it by 
+        selecting the parent element of the target element and replace the target element
+        with the new element by using <span> replaceChild()</span> method.
+        <br>
+        Example:
+        <br><br>
+        <p>
+          <ul>
+            <li>Home</a></li>
+            <li>Service</li>
+            <li>About</li>
+          </ul>
+          </p>
+          <br>
+          First select the last item of the list usign querySelector() method:
+         <br><br>
+         <p>
+         <span class="p">const</span> listItem = document.querySelector(
+          <span class="green">"li: last-child"</span>);
+         </p>
+         <br>
+         Then, create a new list item element:
+         <br><br>
+         <p>
+           <span class="p"> const</span> newItem = document.createElement(
+           <span class="green">'li'</span>);
+           <br>
+           newItem.innerHTML = 
+           <span class="green">'Procudcts'</span>;
+          </p>
+           <br><br>
+           Now get the parent of the target element and call the <span>replaceChild()</span> method:
+           <br><br>
+           <p>
+             <span class="r">listItem</span>. 
+             <span class="green">parentNode.replaceChild</span>(
+             <span class="r">newItem</span>,
+             <span class="r">listItem</span>);
+           </p>
+          <br>
+          The output will be:
+          <br><br>
+          <p>
+            <ul>
+              <li><span class="grey">Home</span></li>
+              <li><span class="grey">Service</span></li>
+              <li><span class="grey">Products</span></li>
+            </ul>
+          </p>
+          <br>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      18. When adding text to a DOM elemet should you use textContent or innerHTML?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <span> InnerHTML</span> returns the string inside a <<span>div</span>> and the HTML 
+        markup contained within our string, including spacing, line breaks, and so on. We 
+        use it when we want to see the HTML markup and what exactly is in our element. 
+        If the text inside the element includes characters as &, <, or >, innerHTML will return
+        these characters as HTML entities & amp;, & lt;, and & gt; . 
+        <br>
+        Example: 
+        <br><br>
+        <p> getValue.innerHTML</p>
+        <br>
+        <p>This element is < strong> strong < /strong> and has     some super fun < code>
+           code < /code>!
+          </p>
+        <br><br>
+        <span>TextContent</span>, on the other side will return the content of all elements
+         in the node, including script and style elements. It is used when we want to see what
+         is in the element, plus any styling on it since it is not aware of the rendered appearance
+         of the text. 
+         <br>
+        Example:
+        <br><br>
+        <p> getValue.textContent</p>
+        <br>
+        <p>This element is strong and has     some super fun code!</p>
+          <br>
+          So, when adding a text it is better to use <span>textContent</span>!
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      19. Where should you inculde your JavaScript tag in your HTML file when working 
+      with DOM nodes?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       The script tags should always be used before the body closes or at the bottom in HTML file
+       so the downloading and executing doesn't block the browser ro parse the HTML in document.
+       <br>
+       If we use <span> defer </span> JavaScipt is downloaded parallelly with HTML parsing, 
+       but it will be exetuced only after full HTML pasing is done.
+        <br>
+        Example: 
+        <br><br>
+        <p> script src="something.js" defer > < / script > 
+        </p>
+        <br><br>
+        <span>Async</span> is another attribute to let JavaScript download as soon as the 
+      script is encountered and after the download it will be executed parallely along with
+      HTML parsing. 
+         <br>
+        Example:
+        <br><br>
+        <p> script src="something.js" async > < / script > </p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      20. How do "events" and "listeners" work?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       A web page responds because of an <span>event</span> occurring. Some events are user generated 
+       and some are created by API. The event can ne any valid JavaScript event. Events are used 
+       without "on" prefix like use "click" instead of "onclick" or "mousedown" instead of 
+       "onmousedown".
+       <br>
+       An <span>event listener </span> is a procedure in JavaScript that aits for an event to occur.
+       The <span> addEventListener()</span> is an inbuilt function in JavaScript which takes
+       the event to listen for and a second argument to be called whenever the descibed event gets 
+       fired. 
+        <br>
+        Syntax: 
+        <br><br>
+        <p> element.addEventListener(event, listener, useCapture);
+        </p>
+        <br><br>
+        <span>Async</span> is another attribute to let JavaScript download as soon as the 
+      script is encountered and after the download it will be executed parallely along with
+      HTML parsing. 
+         <br>
+        Example:
+        <br><br>
+        <p> script src="something.js" async > < / script > </p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      21. What are three ways to use events in your code?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        There are three ways to declare an event in JavaScript: inline, using a property, 
+        or using a listener.
+        <br>
+       <p>
+         <ol class="span2">
+         <li><span> HTML event handler attributes (onclick)</span></li>
+         <li><span> Level 0 event handlers</span></li>
+         <li><span>DOM Level 2 event handlers:</span>
+           <br>
+              <span class="span1"> addEventListener() </span>- to register an event handler
+           <br>
+           <span class="span1"> removeEventListener()</span> - to remove an event handler 
+         </li>
+       </ol>
+        </p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      22. Why are event listeners the preferred way to handle events?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        For a given element, you can only have one event handler per type, but you can have
+        multiple event listeners. 
+        Event listeners are preferred at handling events because for a given element, you can only
+        have one event handler per event type but you can have multiple event listeners. If an 
+        element will have more than one event it is better to use event listeners.
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      23. What are the benefits of using named functions in your listeners?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+         Named functions make sense with error stacks while using anonymous functions reduces
+         the usefulness of the call stack and they are not reliable. Named functions allow 
+         JavaScript to look for statements starting with function keywords to do the hoisting. 
+         A named function is available even before it s declared which makes the following
+         code valid. Also, named functions improve readability and helps a callback function
+         understand where to look at. 
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      24. How do you attach listeners to groups of nodes?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        To add an event listener to a single event we use this syntax:
+        <br>
+        <p>
+          document.querySelector(.'my-element').addEventListener('click', event => {
+            <br>
+            // handle click
+            <br>
+          })
+        </p>
+        <br>
+        In case you want to attach the same event to multiple elements then use either:
+        <br>
+        <ul>
+          <li>
+          <span>Loops:</span>
+          <p> <br> 
+            document.querySelectorAll(.'some-class').forEach(item => {
+              <br>
+              item.addEventListener('click', event => {
+                <br>
+                // handle click
+                <br>
+              })
+              <br>
+            })
+          </p>
+       <br>
+        If the elements don't share the same class, then you can build an array on the fly:
+        <br>
+        <p>
+          [document.querySelector(.'a-class'), document.querySelector('. another-class')].
+          <br>
+          forEach(item => {
+            <br>
+            item.addEventListener('click', event => {
+              <br>
+              // handle click
+              <br>
+            })
+            <br>
+          })
+            <br>
+        </p>
+        </li>
+        <br>
+        <li> 
+          <span>Event Bubbling:</span>
+          <br> 
+          Attach the event listener on the body element. The event is always managed by the most 
+          specific element, so you can immediately check if that's one of the elements that shoul 
+          handle the event.
+          <br>
+          Example:
+          <br>
+          <p>
+            const element1 = document.querySelector('.a-class')
+            <br>
+            const element2 = document.querySelector('.another-class')
+            <br><br>
+            body.addEventListener('click', event => {
+              <br>
+              if(event.target !== element1 && event.target !== element2){
+                <br>
+                return
+                <br>
+              }
+              <br>
+              // handle click
+              <br>
+              }
+          </p>
+         </li>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      25. What is the difference between the return values of querySelector and querySelectorAll?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        The difference is that <span>querySelector()</span> will return the first element within
+        the document that matches the specified group of selecors, or null if no matches are found. 
+        <br>
+        <p> var element = document.querySelector('selectors');</p>
+        <br>
+        On the other side <span>querySelectorAll()</span> will return an array of objects with
+        the elements that match the specified group f selectors. 
+        <br>
+        <p> var element = document.querySelectorAll('selectors');</p>
+        <br>
+        So, the main difference between them is that querySelector() returna signle object with 
+        the first element that matches the selector, while the querySelectorAll() returns an array 
+        of objects with all the selectors' matching HTML elements.
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      26. What does a "nodelist" contain?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       A NodeList is a collection of document nodes (element nodes, attribute nodes, and text
+       nodes). HTML Collection items can be accessed by their name, id, or index numebr. 
+       NodeList items can be only accessed by their index number. 
+       An HTML Collection is always a live collection while a NodeList is most often a 
+       static collection. For example, if you add a <li> element to a list in the DOM the list 
+         in the HTMLCollection will change but the list in NodeList will not change.
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      27. Explain the difference between "capture" and "bubbling"?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       The DOM Events has 3 phases of event propagation:
+       <br>
+       <ul class="span1">
+         <li><span>Capturing phase</span></li>
+         <li><span>Target phase</span></li>
+         <li><span>Bubbling phase</span></li>
+       </ul>
+       <span>Bubbling</span> is a process where the events "bubble" from the inner element up 
+       through parents like a bubble in a water. 
+       <br>
+       <span>Capturing</span> is a process where the event goes down to the element.
+       The capturing option has two possible values:
+       <ol class="span1">
+         <li> False : the handler is set on the bubbbling phase</li>
+         <li> True: the handler is set on the capturng phase</li>
+       </ol>
+       <br>
+        Inside a table, clicking on <<span>td</span>> the event first goes through the 
+        ancestors chain down to the element <span>(capturin phase)</span>, then it reaches 
+        the target and triggers there <span>(target phase)</span>, and then it goes up 
+        again <span>(bubbling phase)</span>, calling handlers on its way. 
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      28. What is the difference between objects and arrays?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       <span> Objects</span> are mutable data stuctures in javascript used to represent 
+       a thing. An object stores the data in key value pair and the key can be anything
+       except for "undefined". These keys are iterable and can be accessed in any order.
+       <br>
+       Example:
+       <br>
+       <p> const obj = {
+          <br>
+           name: 'Maria',
+          <br>
+           age: '25',
+          <br>
+           getDetails: function(){
+          <br>
+          return `${this.name} is ${this.age} years old`;
+          <br>
+           }
+           <br>
+           };
+          <br>
+           console.log(obj.name);
+          <br>
+          // "Maria"
+          <br> 
+          console.log(obj.age);
+           <br>
+          // "25"
+          <br>
+          console.log(obj.getDetainsl());
+          <br>
+          // "Maria is 25 years old" 
+        </p>
+        <br>
+        <span>Arrays</span> are objects only in JavaScript. The difference between objects and 
+        arrays is that arrays store the data in an ordered collection the data can be accessed 
+        using a numerical index. Arrays are mutable and the data can be modified at any index. 
+        Arrays are iterable and we can loop through each key and access its value.
+        <br><br>
+        So, if you have to store the data in order or in a sequence then it is better to 
+        use an array, otherwise you can use object for everything else. 
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      29. How do you access object properties?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+       You can access the properties of an object in 3 ways:
+       <ol class="span1">
+         <li> Dot property accessor: <span>object.property</span></li>
+         <li> Square brackets property access: <span>object['property']</span></li>
+         <li> Object destructuring: <span>const {property} = object</span></li>
+       </ol>
+        </div>
+    </div>
+  </div>
+
+
+</div>
+     
+        
+
+ 
+
+    
+
+    <footer class="footer">
+        <h1 class="footer-heading"><span class="highlight">made with </span> love</span></h1>
+    </footer>
+    <script src="theory.js"></script>
+    <script src="project.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>

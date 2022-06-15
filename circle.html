@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Circle | Area & Perimeter </title>
+
+    <link rel="stylesheet" a href="css/circle.css">
+
+</head>
+<body>
+    <ul class="links-container">
+        <li class="links-item"><a href="index.html" class="link active">home</a></li>
+    </ul>
+    <div class="draw">
+    <canvas id="myCanvas"></canvas>
+   
+    <p class="repo">  Link to my
+        <a href="https://github.com/MorenaTirana/Circumference-Area-of-a-Circle">GitHub Repository</a></p>
+    <br>
+    <input type="text" id="getRadius" value="r" style="font-size:15px;"/>
+    <input type="button" id="draw" value="Draw" onclick="drawCircle();"/>
+    <input type="button" id="clear" value="Clear" onclick="clearArea();"/>
+   </div>
+    <div id="formula">
+    
+        <h2>
+             The <span class="green"> Circumference</span> of a 
+            <span class="purple"> Circle</span> is:
+        </h2>
+
+         <h3>
+            <span class="green">circumference</span> = 2 * 𝜋 * <span class="blue">r</span>   
+         </h3>
+         <h2 style="padding-left:50px;">
+             The <span class="green"> Area </span> of a 
+            <span class="purple"> Circle</span> is:
+        </h2>
+
+         <h3 style="padding-left:60px;"><span class="green">area</span> = 
+            2 * <span class="blue">r </span> * <span class="blue">r </span>
+         </h3>
+    </div>
+
+    <section class="area">
+            <h2>
+                <span class="red" >Calculate</span> 
+               <span class="blue" style="font-size:30px;">Them</span>
+            </h2>
+
+            <p>Enter radius 
+                <span class="blue">r</span> : 
+                <input type = 'text' id = 'radius'>
+            </p>
+
+            <input type = 'submit' value = 'Calculate' onclick = 'calculate()'>
+            <p style="font-weight:bold;">The 
+                <span class="green"> Circumference </span> is:</p>
+                <p id = 'ans'>
+            </p> 
+            <p style="padding-top: 30px; font-weight:bold;">The 
+                <span class="green"> Area </span> is:
+            </p>
+            <p id = 'answer'></p>
+            <p class="repo">  Link to my
+                <a href="https://github.com/MorenaTirana/Even-or-Odd-">GitHub Repository</a></p>
+            <br>
+    </section> 
+
+    <script src="js/circle.js"></script>
+
+</body>
+</html>

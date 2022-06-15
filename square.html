@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal of a Square</title>
+
+    <link rel="stylesheet" a href="css/square.css">
+  
+
+</head>
+<body>
+    <ul class="links-container">
+        <li class="links-item"><a href="index.html" class="link active">home</a></li>
+    </ul>
+   <div class="square">
+       <div id="diagonal">
+           <p>d</p>
+        </div>   
+   </div>
+
+    <div id="formula">
+    
+        <h3>
+            According to <span class="red"> Pythagoras Theorem</span>
+        </h3>
+        <h2>
+           
+            <span class="green">hypotenus</span><sup>2</sup> = 
+            <span class="blue"> base </span><sup>2</sup> + 
+            <span class="purple"> perpendicular </span><sup>2</sup> 
+        </h2>
+        <br>
+
+        <p>
+            If each side of a square is<span class="red"> s = 9 </span>
+            the its diagonal is : 
+        </p>
+
+         <h1>
+            <span class="green">d</span><span class="red"><sup>2</sup></span> = 
+                <span class="blue">s</span><span class="red"><sup>2</sup></span>
+                 + <span class="blue">s</span><span class="red"><sup>2</sup></span>
+                <br>
+                <br>
+            <span class="green"> d</span><span class="red"><sup>2</sup></span> = 
+                 2 * <span class="blue"> s </span><span class="red"><sup>2</sup></span>
+                 <br>
+                 <br>
+            <span class="green"> d</span> = 
+                <span class="blue"> s </span><span class="radix"><span> 2 </span></span><br>
+        </h1>
+    </div>
+    <section class="area">
+        <div class="area-square">
+            <h2><span class="green">Diagonal</span> of a <span class="blue">Square</span></h2>
+           <p> Each side is : <input type = 'text' id = 'side'></p>
+            <br>
+            <br>
+            <div class="response">
+                <input type = 'submit' value = 'Calculate' onclick = 'calculate_square()'>
+                <p>Diagonal is:</p>
+                <p id = 'answer'></p>  
+            </div>
+        </div> 
+        <div class="area-rectangle">
+            <h2><span class="green">Diagonal</span> of a <span class="blue">Rectangle</span></h2>
+           <p>
+                Length: <input type = 'text' id = 'length'><br>
+                <br>
+                Width: <input type = 'text' id = 'width'><br>
+            </p>
+            <br>
+                <input type = 'submit' value = 'Calculate' onclick = 'calculate_rectangle()'>
+                <p>Diagonal is:</p>
+                <p id = 'ans'></p> 
+        </div>
+    </section>
+    <p class="repo">  Link to my
+        <a href="https://github.com/MorenaTirana/DiagonalOfASquare">GitHub Repository</a></p>
+    <br>
+
+ 
+    <script src="js/square.js"></script>
+
+</body>
+</html>
