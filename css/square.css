@@ -1,0 +1,192 @@
+.links-container{
+    display: flex;
+    list-style: none;
+  }
+  .link{
+    text-transform: capitalize;
+    color: blue;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000000;
+    text-decoration: none;
+    margin: -20px 10px;
+    padding: 10px;
+    margin-top:-160px;
+    left: -40px;
+    position: relative;
+    z-index: 900;
+  }
+  #result{
+    color: red;
+}
+  .link:hover:not(.active){
+    opacity: 0.7;
+  }
+  .link.active::before, 
+  .separator::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: blue;
+  }
+  .link.active::after, 
+  .separator::after{
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: blue;
+  }
+  .repo{
+    flex-direction: flex-end;
+    margin-top: -580px;
+    margin-left: 990px;
+    font-weight: bold;
+    color:black;
+}
+.repo a{
+    color: red;
+    font-size: 20px;
+}
+.square{
+    margin-left: 20px;
+    margin-top: 30px;
+    height: 0px;
+    width: 0px;
+    border: 70px solid transparent;
+    border-color: transparent purple blue transparent;
+    transition: all 1s;
+}
+
+#purple1{
+    position: relative;
+    font-size: 10px;
+    width: 150px;
+    margin: -53% 13%;
+    background-color: #33cc33;
+}
+.purple1 p{
+    margin-top: -50%;
+    z-index: 9;
+}
+
+#diagonal{
+    width:140px;
+    height: 140px;
+    background: linear-gradient(135deg, transparent, transparent 49%, green 49%, white 51%, transparent 11%, transparent);
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    pointer-events: none;
+}
+#diagonal p{
+    margin: 50px 60px;
+    color: green;
+    font-weight: bold;
+}
+.square:hover{
+    border-color: green;
+}
+#formula {
+    position: absolute;
+    top: 25px;
+    width: 500px;
+    padding: 0 20px;
+    left: 300px;
+    white-space: nowrap;
+    line-height: 1em;
+    font-size: 80%;
+    background-color: pink;
+}
+
+.green { color: #33cc33; }
+.blue  { color: #3333dd; }
+.red   { color: #ff0000; }
+.purple { color: #800080; }
+
+.radix > span {
+    text-decoration:overline;
+}
+.radix:before {
+    content: '\00221a'; /* unicode for &radic; */
+    position: relative;
+    top: 1px;
+}
+h3{
+    margin-left: 120px;
+}
+#formula h2{
+    margin-left: 70px;
+}
+#formula p{
+    margin-left: 20%;
+}
+h1{
+    margin-left: 170px;
+}
+.area{
+    width: 800px;
+    height: 300px;
+    padding: 0 70px;
+    margin-left: 150px;
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;  
+}
+.area-square p{
+    margin-left: 20px;
+}
+.area-rectangle p{
+    margin-left: 30px;
+}
+.response{
+    margin-top: 30px;
+}
+.response p{
+    margin-top: 20px;
+}
+input[type= 'text']{
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    background-color: #1b87ec;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+input[type= 'submit']{
+    background-color: red;
+    color: #fff;
+    margin-top:5px;
+    margin-left: 20%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 4px 5px 5px red;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#width{
+    margin-left: 5px;
+}
+#answer{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:-37px;
+    margin-left: 100px;
+}
+
+#ans{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:-37px;
+    margin-left: 110px;
+}
